@@ -1,125 +1,206 @@
 * {
-    box-sizing: border-box;
-  }
-  .cover {
-    background: url('https://orange.codeberryschool.com/content/images/project-assets/page-header-bg.jpg') no-repeat center;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
-    color: hsla(0,0%,100%,.7);
-    font-family: 'Cormorant Garamond', serif;
-    text-align: center;
-    display: table;
-  }
-  .wrapper {
-    display: table-cell;
-    vertical-align: middle;
-    padding: 0 .625rem;
-  }
-  .byline h2 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-    letter-spacing: .1rem;
-    margin-bottom: .5rem;
-    text-transform: uppercase;
-  }
-  
-  .byline h3 {
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-  }
-  
+  box-sizing: border-box;
+}
+.cover {
+  background: url("./photos/IMG_3085-2.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  color: hsla(0, 0%, 0%, 0.9);
+  font-family: "Cormorant Garamond", serif;
+  text-align: center;
+  display: table;
+}
+.wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 0.625rem;
+}
+.byline h2 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: black;
+}
+
+.byline h3 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  color: black;
+}
+
+.headline {
+  font-size: 3rem;
+  margin: 2rem 0;
+}
+
+@media screen and (min-width: 1224px) {
   .headline {
-    font-size: 3rem;
-    margin: 2rem 0;
+    font-size: 6rem;
   }
-  
-  @media screen and (min-width: 1224px) {
-  
-    .headline {
-      font-size: 6rem;
-    }
-  
-  }
-  
-  .tagline {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-  /* ==== ARTIKKELITYYLIT ==== */
+}
+
+.tagline {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+/* ==== ARTIKKELITYYLIT ==== */
 
 section {
-    padding: 0 .625rem;
-  }
-  
-  @media screen and (min-width: 1224px) {
-  
-    section {
-      width: 50%;
-      max-width: 600px;
-      margin: 2rem auto;
-    }
-  
-  }
-  
-  section h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
-    line-height: 1.25;
-    margin: 2rem 0;
-  }
-  
-  section p {
-    font-family: 'Libre Franklin', sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
-    margin: 1rem 0;
-  }
-  nav {
-    font-size: 0;
-  }
-/* ==== YLEISET TYYLIT ==== */
+  padding: 0 0.625rem;
+}
 
-* {
-    box-sizing: border-box;
+@media screen and (min-width: 1224px) {
+  section {
+    width: 50%;
+    max-width: 600px;
+    margin: 2rem auto;
   }
-  
-  /* ==== SIMPPELI YLÄREUNAN NAVI ==== */
-  
-  nav ul {
-    background-color: #eee;
-    text-align: center;
-  }
+}
 
-  nav li {
-    font-family: 'Anton', sans-serif;
-    font-size: 1.4rem;
-    line-height: 3rem;
-    height: 3rem;
-    border-bottom: 1px solid #ccc;
-  }
-  @media (min-width: 600px) {
+section h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  line-height: 1.25;
+  margin: 2rem 0;
+}
 
-    nav li {
-        display: inline-block;
-        border-bottom: none;
-        width: 7.5rem;
-    }
-  
+section p {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+/* ==== A FLOATED TOP NAVIGATION ==== */
+
+nav {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
   }
+  
   nav a {
     text-decoration: none;
-    color: #C74F78;
+    font-family: "Space Mono", monospace;
+    text-align: center;
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #fff;
+  }
+  
+  nav a:hover {
+    color: hsl(0, 0%, 77%);
+    transition: color 0.15s ease-in-out;
+  }
+  .btn:hover {
+    color: #000;
+    transition: background-color 0.15s ease-in-out;
+  }
+  
+  @media (min-width: 768px) {
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  
+    nav a {
+      float: right;
+    }
+  
+    .btn-home {
+      float: left;
+    }
+  
+    /* Clearfix */
+    nav::after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+  }
+  
+  section {
+    font-size: 1rem;
+    font-family: "Space Mono", monospace;
+  }
+  
+  @media (min-width: 768px) {
+    section {
+      width: 60%;
+      margin: 5.25rem auto 1.25rem;
+    }
+  }
+  
+  p {
+    margin-bottom: 1.25rem;
+    padding: 0.5rem;
+  }
+  /* ==== SIMPPELI FOOTER ==== */
+  
+  footer {
+    background-color: rgba(0, 0, 0);
+    display: table;
+    width: 100vw;
+    height: 4rem;
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Arial', sans-serif;
+    font-size: .875rem;
+  }
+  footer small {
+    color: #ccc;
+    letter-spacing: .025rem;
+    margin-bottom: 1.5rem;
     display: block;
   }
-  nav a:hover {
-    background-color: #fff;
+  
+  .footer-nav a {
+    color: #c74f78;
+    text-decoration: none;
+    margin: 0 .5rem;
+    display: inline-block;
   }
-  nav a:hover {
-    background-color: #fff;
-    transition: background-color .3s ease-in-out;
+  
+  .footer-nav a:hover {
+    color: #f26896;
+    transition: color .15s ease-in-out;
   }
-  nav a.active {
-    background-color: #c74f78;
-    color: #eee;
+  footer small {
+    color: #ccc;
+    letter-spacing: .025rem;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+  
+  .footer-nav a {
+    color: #c74f78;
+    text-decoration: none;
+    margin: 0 .5rem;
+    display: inline-block;
+  }
+  
+  .footer-nav a:hover {
+    color: #f26896;
+    transition: color .15s ease-in-out;
+  }
+  footer small {
+    color: #ccc;
+    letter-spacing: .025rem;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+  
+  .footer-nav a {
+    color: #c74f78;
+    text-decoration: none;
+    margin: 0 .5rem;
+    display: inline-block;
+  }
+  
+  .footer-nav a:hover {
+    color: #f26896;
+    transition: color .15s ease-in-out;
   }
